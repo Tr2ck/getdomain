@@ -46,9 +46,6 @@ def get_domain(k):
 	data = str(response.content,'utf-8')
 	data = json.loads(data)
 	for j in range(0,10):
-		print(j)
-		#print(data)
-		#print(data['data']['items'][j])
 		title = data['data']['items'][j]['title']
 		site_domain = data['data']['items'][j]['site_domain']
 		site = data['data']['items'][j]['site']
@@ -74,7 +71,6 @@ def main():
 	url = "https://console.riskivy.com/spy?query=domain:%22"+domain+"%22"
 	rs = requests.get(url=url,cookies=cookies_value)
 	e_data = str(rs.content,'utf-8')
-	#print(e_data)
 	e_data = json.loads(e_data)
 	pageCount = e_data['data']['_meta']['pageCount']
 
