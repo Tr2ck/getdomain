@@ -70,7 +70,7 @@ def init_database():
 
 
 def init_table():
-	db = pymysql.connect('localhost','root','lidashen65535','domain')
+	db = pymysql.connect('localhost','root','','domain')
 	cursor = db.cursor()
 
 	cursor.execute('drop table if exists '+table)
